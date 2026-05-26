@@ -1,0 +1,105 @@
+:root[data-theme="tvk"] {
+  --color-primary: #800000;
+
+  --color-primary-light: #a61b1b;
+
+  --color-primary-dark: #5c0000;
+
+  --color-secondary: #ffc107;
+
+  --color-secondary-light: #ffd54f;
+
+  --color-secondary-dark: #e0a800;
+
+  --color-background: #fffdf8;
+
+  --color-surface: #ffffff;
+
+  --color-surface-alt: #fff7e6;
+
+  --color-surface-hover: #fff1cc;
+
+  --color-text-primary: #1a1a1a;
+
+  --color-text-secondary: #5c5c5c;
+
+  --color-text-muted: #8c8c8c;
+
+  --color-text-inverse: #ffffff;
+
+  --color-border: #f1d9a7;
+
+  --color-border-strong: #d6a94d;
+
+  --color-success: #15803d;
+
+  --color-warning: #ca8a04;
+
+  --color-danger: #dc2626;
+
+  --color-info: #2563eb;
+
+  --shadow-xs: 0 1px 1px rgba(128, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px rgba(128, 0, 0, 0.05);
+  --shadow-md: 0 2px 6px rgba(128, 0, 0, 0.08);
+  --shadow-lg: 0 4px 12px rgba(128, 0, 0, 0.1);
+  --shadow-xl: 0 8px 20px rgba(128, 0, 0, 0.12);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+:root[data-theme="govt"] {
+  --color-primary: #1a3c6e;
+
+  --color-primary-light: #29518d;
+
+  --color-primary-dark: #11294a;
+
+  --color-secondary: #f4a520;
+
+  --color-secondary-light: #ffbe4d;
+
+  --color-secondary-dark: #d48c12;
+
+  --color-background: #f8fafc;
+
+  --color-surface: #ffffff;
+
+  --color-surface-alt: #eef3f8;
+
+  --color-surface-hover: #dbeaf8;
+
+  --color-text-primary: #111827;
+
+  --color-text-secondary: #4b5563;
+
+  --color-text-muted: #9ca3af;
+
+  --color-text-inverse: #ffffff;
+
+  --color-border: #d7e0ea;
+
+  --color-border-strong: #aab9cb;
+
+  --color-success: #15803d;
+
+  --color-warning: #d97706;
+
+  --color-danger: #dc2626;
+
+  --color-info: #2563eb;
+
+  --shadow-xs: 0 1px 1px rgba(26, 60, 110 0.03);
+  --shadow-sm: 0 1px 3px rgba(26, 60, 110 0.05);
+  --shadow-md: 0 2px 6px rgba(26, 60, 110 0.08);
+  --shadow-lg: 0 4px 12px rgba(26, 60, 110 0.1);
+  --shadow-xl: 0 8px 20px rgba(26, 60, 110 0.12);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}

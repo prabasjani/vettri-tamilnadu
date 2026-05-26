@@ -11,7 +11,7 @@ export const updatePersonalInfoService = async ({
   payload,
   isOnboarding,
 }) => {
-  const { fullname, gender, dob, profilePhoto } = payload;
+  const { fullname, gender, dob } = payload;
 
   // Required validation
   if (!fullname || !gender || !dob) {
@@ -27,7 +27,7 @@ export const updatePersonalInfoService = async ({
     fullname,
     gender,
     dob,
-    profilePhoto,
+    // profilePhoto,
   };
 
   // Update onboarding step

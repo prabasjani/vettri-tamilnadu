@@ -1,0 +1,110 @@
+src/
+│
+├── app/
+│   ├── router/
+│   │   └── AppRouter.jsx
+│   │
+│   ├── providers/
+│   │   └── AppProvider.jsx
+│   │
+│   └── layouts/
+│       ├── AuthLayout.jsx
+│       ├── DashboardLayout.jsx
+│       └── PublicLayout.jsx
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
+│
+├── components/
+│   ├── ui/
+│   │   ├── Button.jsx
+│   │   ├── Input.jsx
+│   │   ├── Card.jsx
+│   │   ├── Modal.jsx
+│   │   ├── Loader.jsx
+│   │   └── EmptyState.jsx
+│   │
+│   ├── shared/
+│   │   ├── Navbar.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── Footer.jsx
+│   │   └── ProtectedRoute.jsx
+│   │
+│   └── feedback/
+│       ├── ErrorMessage.jsx
+│       ├── SuccessToast.jsx
+│       └── PageLoader.jsx
+│
+├── context/
+│   ├── AuthContext.jsx
+│   ├── ThemeContext.jsx
+│   └── AppContext.jsx
+│
+├── features/
+│   ├── auth/
+│   │   ├── api/
+│   │   │   └── authApi.js
+│   │   │
+│   │   ├── components/
+│   │   │   ├── LoginForm.jsx
+│   │   │   ├── RegisterForm.jsx
+│   │   │   └── OTPInput.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── ForgotPassword.jsx
+│   │   │
+│   │   ├── hooks/
+│   │   │   └── useAuth.js
+│   │   │
+│   │   └── utils/
+│   │       └── authValidation.js
+│   │
+│   ├── onboarding/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── hooks/
+│   │
+│   ├── dashboard/
+│   │
+│   ├── complaints/
+│   │
+│   ├── petitions/
+│   │
+│   ├── schemes/
+│   │
+│   ├── volunteers/
+│   │
+│   └── admin/
+│
+├── hooks/
+│   ├── useDebounce.js
+│   ├── useLocalStorage.js
+│   └── useLoading.js
+│
+├── lib/
+│   ├── axios.js
+│   ├── constants.js
+│   ├── routes.js
+│   └── utils.js
+│
+├── services/
+│   ├── tokenService.js
+│   ├── storageService.js
+│   └── authService.js
+│
+├── styles/
+│   ├── globals.css
+│   └── theme.css
+│
+├── pages/
+│   ├── Landing.jsx
+│   ├── NotFound.jsx
+│   └── Unauthorized.jsx
+│
+├── App.jsx
+└── main.jsx

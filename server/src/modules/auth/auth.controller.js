@@ -28,6 +28,7 @@ export const registerUser = asyncHandler(async (req, res) => {
 // LOGIN USER
 export const loginUser = asyncHandler(async (req, res) => {
   const data = await loginUserService(req.body);
+  console.log(req.body);
 
   res.cookie("accessToken", data.accessToken, cookieOptions);
   res.cookie("refreshToken", data.refreshToken, cookieOptions);
@@ -52,9 +53,8 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
     id: decoded.id,
   });
 
-  return sendSuccess(res, HTTP_STATUS.OK, "Access token refreshed", {
-    accessToken,
-  });
+  res.cookie("accessToken", accessToken, cookieOptions);
+  return sendSuccess(res, HTTP_STATUS.OK, "Access token refreshed");
 });
 
 // LOGOUT USER
@@ -64,4 +64,11 @@ export const logoutUser = asyncHandler(async (req, res) => {
   res.clearCookie("refreshToken");
 
   return sendSuccess(res, HTTP_STATUS.OK, MESSAGES.LOGOUT_SUCCESS);
+});
+
+// GET ME
+export const getMe = asyncHandler(async (req, res) => {
+  return sendSuccess(res, HTTP_STATUS.OK, "User fetched successfully", {
+    user: req.user,
+  });
 });

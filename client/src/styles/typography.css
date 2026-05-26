@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=EB+Garamond:wght@500;600;700&display=swap");
+
+:root {
+  --font-primary: "IBM Plex Sans", sans-serif;
+  --font-display: "EB Garamond", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
