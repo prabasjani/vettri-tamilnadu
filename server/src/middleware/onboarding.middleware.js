@@ -29,3 +29,14 @@ export const validateOnboardingStep = (requiredStep) => {
     next();
   };
 };
+
+export const requireOnboarding = (req, res, next) => {
+  if (!req.user?.hasCompletedOnboarding) {
+    throw new ApiError(
+      HTTP_STATUS.FORBIDDEN,
+      "Please complete onboarding to continue",
+    );
+  }
+
+  next();
+};

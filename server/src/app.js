@@ -13,6 +13,7 @@ import { sendSuccess, sendError } from "./utils/response.js";
 
 import authRoutes from "./modules/auth/auth.route.js";
 import profileRoutes from "./modules/profile/profile.routes.js";
+import complaintRoutes from "./modules/complaint/complaint.routes.js";
 
 const app = express();
 
@@ -72,6 +73,7 @@ app.get("/health", (req, res) => {
 // ROUTES
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/profile", profileRoutes);
+app.use("/api/v1/complaints", complaintRoutes);
 
 // 404 HANDLER
 app.use((req, res) => {

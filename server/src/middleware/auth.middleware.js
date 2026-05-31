@@ -8,7 +8,7 @@ import { verifyAccessToken } from "../utils/security/token.js";
 
 export const protect = asyncHandler(async (req, res, next) => {
   // Get token from cookies
-  const token = req.cookies.accessToken;
+  const token = req.cookies?.accessToken;
 
   // No token
   if (!token) {
