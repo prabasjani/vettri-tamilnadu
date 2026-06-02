@@ -109,11 +109,23 @@ export const createComplaintService = async (payload, user) => {
 
 // GET MY COMPLAINTS
 export const getMyComplaintsService = async (userId) => {
-  return await Complaint.find({
+  const complaints = await Complaint.find({
     userId,
     isDeleted: false,
-  }).sort({
-    createdAt: -1,
+  }).sort({ createdAt: -1 });
+
+  return complaints.map((complaint) => {
+    const supportCount = complaint.supports.length;
+
+    return {
+      ...complaint.toObject(),
+
+      supportCount,
+
+      supported: complaint.supports.some(
+        (id) => id.toString() === userId.toString(),
+      ),
+    };
   });
 };
 
@@ -125,20 +137,26 @@ export const getConstituencyFeedService = async (user) => {
   })
     .populate("userId", "name")
     .sort({
-      "priority.final": -1,
-
       createdAt: -1,
     });
 
   return complaints.map((complaint) => {
     const supportCount = complaint.supports.length;
 
-    complaint.priority.final = calculateFinalPriority(
-      complaint.priority.base,
-      supportCount,
-    );
+    return {
+      ...complaint.toObject(),
 
-    return complaint;
+      supportCount,
+
+      supported: complaint.supports.some(
+        (id) => id.toString() === user._id.toString(),
+      ),
+
+      priority: {
+        ...complaint.priority,
+        final: calculateFinalPriority(complaint.priority.base, supportCount),
+      },
+    };
   });
 };
 

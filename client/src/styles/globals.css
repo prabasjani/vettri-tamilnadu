@@ -94,6 +94,7 @@ a {
   animation: modalEnter 0.3s ease-out;
 }
 
+/* SCROLL BAR STYLES */
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
@@ -110,6 +111,17 @@ a {
   background: var(--color-primary);
   border-radius: 10px;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* ---------------------------------------------- */
 
 /* Opt-in to full customization */
 select,

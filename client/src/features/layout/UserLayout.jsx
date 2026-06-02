@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 const UserLayout = ({ children, title, desc }) => {
   return (
-    <div className="min-h-screen bg-background flex">
+    <div className="h-screen bg-background flex">
       {/* SIDEBAR */}
       <Sidebar />
 
@@ -14,18 +14,10 @@ const UserLayout = ({ children, title, desc }) => {
         <Header />
 
         {/* PAGE */}
-        <main className="flex-1 overflow-y-auto p-6">
-          {(title || desc) && (
-            <div className="mb-6">
-              {title && (
-                <h1 className="text-3xl font-bold text-primary">{title}</h1>
-              )}
-
-              {desc && <p className="mt-1 text-muted">{desc}</p>}
-            </div>
-          )}
-
-          {children}
+        <main className="flex-1 min-h-0 p-6 flex flex-col">
+          <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide">
+            {children}
+          </div>
         </main>
 
         <Footer />

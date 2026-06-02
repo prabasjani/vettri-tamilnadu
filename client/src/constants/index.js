@@ -1,3 +1,5 @@
+import { AlertTriangle, Users, HandHeart } from "lucide-react";
+
 export const features = [
   {
     id: 1,
@@ -76,6 +78,74 @@ export const INTERESTS = [
 ];
 
 export const IDENTITY_TYPES = ["aadhaar", "pan", "voterId"];
+
+export const COMPLAINT_CATEGORY_OPTIONS = [
+  {
+    value: "ROAD",
+    label: "Road Issues",
+  },
+  {
+    value: "WATER",
+    label: "Water Supply",
+  },
+  {
+    value: "DRAINAGE",
+    label: "Drainage",
+  },
+  {
+    value: "STREET_LIGHT",
+    label: "Street Light",
+  },
+  {
+    value: "GARBAGE",
+    label: "Garbage Collection",
+  },
+  {
+    value: "ELECTRICITY",
+    label: "Electricity",
+  },
+  {
+    value: "PUBLIC_SAFETY",
+    label: "Public Safety",
+  },
+  {
+    value: "CORRUPTION",
+    label: "Corruption",
+  },
+  {
+    value: "OTHER",
+    label: "Other",
+  },
+];
+
+export const QUICK_ACTIONS = [
+  {
+    title: "Report Civic Issues",
+    description:
+      "Raise complaints about roads, drainage, street lights, garbage collection and other public infrastructure concerns.",
+    buttonText: "Create Complaint",
+    link: "/complaints/create",
+    icon: AlertTriangle,
+  },
+
+  {
+    title: "Strengthen Your Community",
+    description:
+      "Bring attention to local challenges and help improve public services in your constituency.",
+    buttonText: "Raise Complaint",
+    link: "/complaints/create",
+    icon: Users,
+  },
+
+  {
+    title: "Support Local Change",
+    description:
+      "Discover issues raised by fellow citizens and support the concerns that matter most to your area.",
+    buttonText: "View Community",
+    link: "/community",
+    icon: HandHeart,
+  },
+];
 
 export const tamilNaduData = {
   Ariyalur: ["Ariyalur", "Jayankondam"],

@@ -9,7 +9,12 @@ const Login = lazy(() => import("@/pages/Login"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 const Onboarding = lazy(() => import("@/features/onboarding/Onboarding"));
-const Dashboard = lazy(() => import("@/features/Dashboard/Dashboard"));
+const Dashboard = lazy(() => import("@/features/dashboard/Dashboard"));
+const Complaints = lazy(() => import("@/features/complaint/Complaints"));
+const CreateComplaint = lazy(
+  () => import("@/features/complaint/CreateComplaint"),
+);
+const Community = lazy(() => import("@/features/community/Community"));
 
 const AppRouter = () => {
   return (
@@ -26,6 +31,30 @@ const AppRouter = () => {
           element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/complaints"
+          element={
+            <ProtectedRoute>
+              <Complaints />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/complaints/create"
+          element={
+            <ProtectedRoute>
+              <CreateComplaint />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/community"
+          element={
+            <ProtectedRoute>
+              <Community />
             </ProtectedRoute>
           }
         />

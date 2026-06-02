@@ -9,4 +9,12 @@ export const API_ENDPOINTS = {
   LOCATION: "/api/v1/profile/location",
   IDENTITY: "/api/v1/profile/identity",
   INTERESTS: "/api/v1/profile/interests",
+
+  // COMPLAINT ENDPOINTS
+  CREATE_COMPLAINT: "/api/v1/complaints/create",
+  MY_COMPLAINTS: "api/v1/complaints/my",
+  COMMUNITY_FEED: "/api/v1/complaints/feed",
+  COMPLAINT_BY_ID: (complaintId) => `/api/v1/complaints/${complaintId}`,
+  SUPPORT_COMPLAINT: (complaintId) =>
+    `/api/v1/complaints/${complaintId}/support`,
 };

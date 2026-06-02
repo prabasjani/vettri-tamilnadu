@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     try {
       setLoading(true);
       const response = await API.get("/api/v1/auth/me");
-      setUser(response.data?.user);
+      setUser(response.data.data?.user);
       setIsAuthenticated(true);
     } catch (error) {
       setUser(null);
